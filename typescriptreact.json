@@ -21,8 +21,41 @@
 		"description": "Initiate a new react component with ts typed props"
 	},
 
+	"Init new ts react component including demo": {
+		"prefix": "_initD",
+		"body": [
+		"import './style.scss';",
+		"import { Demo, Theme } from '../Demo';",
+		"",
+		"interface ${1:Component}Props {",
+			"\tid?: string",
+			"\tclassName?: string",
+		"}",
+		"",
+		"export const ${1:Component} = ({ id, className }: ${1:Component}Props ) => {",
+  		"\treturn (",
+    		"\t\t<div id={id} className={className}>",
+    			"\t\t\t$0", 
+    		"\t\t</div>",
+  		"\t)",
+		"}",
+		"",
+		"export const ${1:Component}Demo = () => {",
+			"\t<Demo",
+				"\t\tcontent={",
+					"\t\t\t<${1:Component} />",
+				"\t\t}",
+				"\t\t// config={",
+					"\t\t\t",
+				"\t\t// }",
+				"\t\ttheme={Theme.dark}",
+			"\t/>",
+		"}"
+		],
+		"description": "Initiate a new react component with ts typed props including a demo stage with config"
+	},
 
-	"Embed in div with className": {
+	"Embed Selection in div with className": {
 		"prefix": "_div",
 		"body": [
 		"<div className='${1:class-name}'>",
