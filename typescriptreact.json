@@ -27,7 +27,7 @@
 		"body": [
 		"<div className='${1:class-name}'>",
 		"\t$TM_SELECTED_TEXT",
-		"</div?"
+		"</div>"
 		],
 		"description": "Embeds selected code in a div"
 	}
